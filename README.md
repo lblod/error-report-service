@@ -38,3 +38,29 @@ http://localhost/error-reports
              }
           
 ```
+
+Will be persisted as:
+
+```
+     
+ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+ PREFIX persoon: <https://data.vlaanderen.be/ns/persoon#>
+ PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+ PREFIX person: <http://www.w3.org/ns/person#>
+ PREFIX session: <http://mu.semte.ch/vocabularies/session/>
+ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+ PREFIX oslc: <https://docs.oasis-open-projects.org/oslc-op/core/v3.0/os/core-vocab.html#>
+ PREFIX dct: <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#>
+ 
+     INSERT DATA {
+             <http://data.lblod.info/id/error-reports/d3bb9450-db5d-11ec-b8b0-b7ac02188020>  a oslc:Error;
+                                                             mu:uuid "d3bb9450-db5d-11ec-b8b0-b7ac02188020";
+                                                             dct:created "2022-05-24T12:34:17.237Z"^^xsd:dateTime;
+                                                             dct:subject """organization-portal-frontend""";
+                                                             oslc:message """some error occured""";
+                                                            oslc:largePreview """some error occured because of smth""";
+                                                            dct:references  <http://xxx.com/person/1234/bestuur>;
+                                                             dct:creator <http://data.lblod.info/id/account/3a91ff60-07c1-4136-ac5e-55cf401e0957>.
+```
