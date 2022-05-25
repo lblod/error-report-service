@@ -1,5 +1,5 @@
 {
-  "name": "error-creator-service",
+  "name": "error-report-service",
   "version": "0.1.0",
   "description": "create a oslc:Error from parameters sent by a frontend",
   "main": "app.js",

@@ -1,4 +1,4 @@
-# [ERROR-CREATOR-SERVICE]
+# [ERROR-REPORT-SERVICE]
 
 create a service that will get parameters and create a oslc:Error from it. It shoud NOT use sudo queries but regular queries that go through mu-auth. This way we ensure only a logged in user can create those errors, limiting the risk of random people calling the API.
 
