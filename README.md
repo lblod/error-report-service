@@ -29,7 +29,8 @@ http://localhost/error-reports
                    "subject":"organization-portal-frontend",
                    "message":"some error occured",
                    "detail":"some error occured because of smth",
-                   "references": "http://xxx.com/person/1234/bestuur"
+                   "references": "http://xxx.com/person/1234/bestuur",
+                   "creator": "http://lblod.data.gift/services/organizationportal-error-service"
                  },                
                 "relationships":{
                    
@@ -62,5 +63,5 @@ Will be persisted as:
                                                              oslc:message """some error occured""";
                                                             oslc:largePreview """some error occured because of smth""";
                                                             dct:references  <http://xxx.com/person/1234/bestuur>;
-                                                             dct:creator <http://data.lblod.info/id/account/3a91ff60-07c1-4136-ac5e-55cf401e0957>.
+                                                             dct:creator <http://lblod.data.gift/services/organizationportal-error-service>.
 ```
