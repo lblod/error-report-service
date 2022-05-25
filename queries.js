@@ -24,7 +24,7 @@ export function getAccount(sessionGraphUri, sessionId) {
   `;
 }
 
-export function insertError(accountUri, subject, message, detail, references) {
+export function insertError(creator, subject, message, detail, references) {
   let now = new Date().toISOString();
   let id = uuid();
   return `
@@ -54,7 +54,7 @@ export function insertError(accountUri, subject, message, detail, references) {
                                                                  )};`
                                                            }
                                                             dct:creator ${sparqlEscapeUri(
-                                                              accountUri // todo using account uri instead of service uri ?
+                                                              creator // e.g http://lblod.data.gift/services/loket-error-alert-service
                                                             )}.
   }
     

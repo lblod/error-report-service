@@ -34,6 +34,10 @@ export async function logError(payload, sessionId) {
   checkNotEmpty(subject, "Subject is mandatory!");
   let message = payload.data.attributes.message;
   checkNotEmpty(message, "message is mandatory!");
+  let creator = payload.data.attributes.creator;
+  checkNotEmpty(creator, "creator is mandatory!");
 
-  await update(insertError(accountUri, subject, message, detail, references));
+  console.debug(`an unexpected error occured for account '${accountUri}. Message: ${message}`);
+
+  await update(insertError(creator, subject, message, detail, references));
 }
